@@ -30,15 +30,13 @@ public:
 	}
 	~MathProxy() { delete math; }
 	double Add(double x, double y) { return math->Add(x, y); }
-	double Sub(double x, double y) { return math->Sub(x, y);}
-	double Mult(double x, double y) { return math->Mult(x, y);}
+	double Sub(double x, double y) { return math->Sub(x, y); }
+	double Mult(double x, double y) { return math->Mult(x, y); }
 	double Div(double x, double y) {
-		if (y != 0.0)
-		{
+		if (y != 0.0) {
 			return math->Div(x, y);
 		}
-		else
-		{
+		else {
 			throw ("На ноль делить нельзя!");
 		}
 	}
@@ -50,10 +48,10 @@ int main()
 
 	MathProxy* proxy = new MathProxy();
 
-	cout << "7 + 11 = "<<proxy->Add(7,11) << endl;
-	cout << "6 - 8 = "<<proxy->Sub(6,8) << endl;
-	cout << "7 * 11 = "<<proxy->Mult(7,11) << endl;
-	cout << "7 / 11 = "<<proxy->Div(7,11) << endl;
+	cout << "7 + 11 = " << proxy->Add(7, 11) << endl;
+	cout << "6 - 8 = " << proxy->Sub(6, 8) << endl;
+	cout << "7 * 11 = " << proxy->Mult(7, 11) << endl;
+	cout << "7 / 11 = " << proxy->Div(7, 11) << endl;
 
 	delete proxy;
 
